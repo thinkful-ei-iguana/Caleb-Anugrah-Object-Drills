@@ -37,3 +37,28 @@ const feast = {
 let fourthMeal = feast.meals;
 
 //console.log(fourthMeal[3]);
+
+// 4. Arrays of objects
+
+const michaelScott = {
+  name: 'michael',
+  jobTitle: 'regional manager'
+};
+const dwight = {
+  name: 'dwight',
+  jobTitle: 'assistant to the regional manager',
+};
+const jim = {
+  name: 'jim',
+  jobTitle: 'Salesperson'
+};
+
+const theOffice = [michaelScott, dwight, jim];
+
+for(let i = 0; i < theOffice.length; i++) {
+  const person = theOffice[i];
+ // console.log(person.name +' - '+ person.jobTitle);
+
+}
+
+// 5. Properties that aren't there
