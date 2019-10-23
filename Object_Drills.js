@@ -62,9 +62,46 @@ for(let i = 0; i < theOffice.length; i++) {
   const person = theOffice[i];
   
   if (person['boss'] === undefined) {
-    console.log(`${person['jobTitle']} ${person['name']} doesn't report to anybody.`);
+    //console.log(`${person['jobTitle']} ${person['name']} doesn't report to anybody.`);
   } else {
-    console.log(`${person['jobTitle']} ${person['name']} reports to ${person['boss']}.`);
+    //console.log(`${person['jobTitle']} ${person['name']} reports to ${person['boss']}.`);
   }
 }
 
+// 6. Cracking the code
+
+const cipher ={
+  a: 2,
+  b: 3,
+  c: 4,
+  d: 5
+};
+
+function decode(word) {
+  let firstChar = word[0];
+  let num = cipher[firstChar];
+ 
+  if (word[0] in cipher) {
+    return word[num - 1];
+  }
+  else {
+    return ' ';
+  } 
+}
+
+function decodeWords(sentence) {
+  let finalSentence = '';
+  const sentArr = sentence.split(' ');
+
+  for (let i = 0; i < sentArr.length; i++) {
+   
+    let letter = decode(sentArr[i]);
+  
+    finalSentence = finalSentence + letter;
+  }
+  return finalSentence;
+}
+
+//console.log(decodeWords('craft block argon meter bells brown croon droop'));
+
+//7. Factory Functions with LOTR
