@@ -38,7 +38,8 @@ let fourthMeal = feast.meals;
 
 //console.log(fourthMeal[3]);
 
-// 4. Arrays of objects
+// 4. Arrays of objects AND 5. Properties that aren't there
+
 
 const michaelScott = {
   name: 'michael',
@@ -47,18 +48,23 @@ const michaelScott = {
 const dwight = {
   name: 'dwight',
   jobTitle: 'assistant to the regional manager',
+  boss: 'michael'
 };
 const jim = {
   name: 'jim',
-  jobTitle: 'Salesperson'
+  jobTitle: 'Salesperson',
+  boss: 'michael'
 };
 
 const theOffice = [michaelScott, dwight, jim];
 
 for(let i = 0; i < theOffice.length; i++) {
   const person = theOffice[i];
- // console.log(person.name +' - '+ person.jobTitle);
-
+  
+  if (person['boss'] === undefined) {
+    console.log(`${person['jobTitle']} ${person['name']} doesn't report to anybody.`);
+  } else {
+    console.log(`${person['jobTitle']} ${person['name']} reports to ${person['boss']}.`);
+  }
 }
 
-// 5. Properties that aren't there
