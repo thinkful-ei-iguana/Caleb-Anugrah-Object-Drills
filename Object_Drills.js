@@ -16,3 +16,17 @@ console.log(loaf.hydration());
 
 
 // 2. Iterating over an object's properties
+
+const random = {
+  foo: 17,
+  bar: 'what?',
+  fum: true,
+  quux: 1000,
+  spam: false
+};
+
+for (const property in random) {
+  console.log(`${property} ${random[property]}`)
+}
+
+// 3. Arrays in objects
