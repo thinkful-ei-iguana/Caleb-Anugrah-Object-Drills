@@ -9,10 +9,10 @@ const loaf = {
   }
 };
 
-console.log(loaf.flour);
-console.log(loaf.water);
+// console.log(loaf.flour);
+// console.log(loaf.water);
 
-console.log(loaf.hydration());
+// console.log(loaf.hydration());
 
 
 // 2. Iterating over an object's properties
@@ -26,7 +26,14 @@ const random = {
 };
 
 for (const property in random) {
-  console.log(`${property} ${random[property]}`)
+//  console.log(`${property} ${random[property]}`)
 }
 
 // 3. Arrays in objects
+
+const feast = {
+  meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+};
+let fourthMeal = feast.meals;
+
+//console.log(fourthMeal[3]);
