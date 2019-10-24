@@ -9,10 +9,10 @@ const loaf = {
   }
 };
 
-// console.log(loaf.flour);
-// console.log(loaf.water);
+console.log(loaf.flour);
+console.log(loaf.water);
 
-// console.log(loaf.hydration());
+console.log(loaf.hydration());
 
 
 // 2. Iterating over an object's properties
@@ -26,7 +26,7 @@ const random = {
 };
 
 for (const property in random) {
-//  console.log(`${property} ${random[property]}`)
+  console.log(`${property} ${random[property]}`)
 }
 
 // 3. Arrays in objects
@@ -36,7 +36,7 @@ const feast = {
 };
 let fourthMeal = feast.meals;
 
-//console.log(fourthMeal[3]);
+console.log(fourthMeal[3]);
 
 // 4. Arrays of objects AND 5. Properties that aren't there
 
@@ -62,9 +62,9 @@ for(let i = 0; i < theOffice.length; i++) {
   const person = theOffice[i];
   
   if (person['boss'] === undefined) {
-    //console.log(`${person['jobTitle']} ${person['name']} doesn't report to anybody.`);
+    console.log(`${person['jobTitle']} ${person['name']} doesn't report to anybody.`);
   } else {
-    //console.log(`${person['jobTitle']} ${person['name']} reports to ${person['boss']}.`);
+    console.log(`${person['jobTitle']} ${person['name']} reports to ${person['boss']}.`);
   }
 }
 
