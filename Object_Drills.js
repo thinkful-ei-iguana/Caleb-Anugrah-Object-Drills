@@ -105,3 +105,46 @@ function decodeWords(sentence) {
 //console.log(decodeWords('craft block argon meter bells brown croon droop'));
 
 //7. Factory Functions with LOTR
+
+function createCharacter (name, nickname, race, origin, attack, defense, weapon) {
+  return {
+    name: name,
+    nickname: nickname,
+    race: race,
+    origin: origin,
+    attack: attack,
+    defense: defense,
+    weapon: weapon,
+    describe() {
+      console.log(`${this.name} is a ${this.race} of the ${this.origin} who uses ${this.weapon}.`);
+    },
+    evaluateFight(character) {
+      let x = this.attack - character.defense;
+      if (x < 0) {
+        x = 0;
+      }
+      let y = character.attack - this.defense;
+      if (y < 0) {
+        y = 0;
+      }
+      return `Your opponent takes ${x} damage and you receive ${y} damage`;
+    }
+  };
+}
+
+const characters = [
+  createCharacter('Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth', 10, 6, 'a wizard staff'),
+  createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1, 'the Ring'),
+  createCharacter('Frodo Baggins', 'frodo', 'Hobbit', 'The Shire', 3, 2, 'Sting and the Barrow-blades'),
+  createCharacter('Aragorn son of Arathorn', 'aragorn', 'Man', 'Anduril', 6, 8, 'Dunnedain'),
+  createCharacter('Legolas', 'legolas', 'Elf', 'Woodland Realm', 8, 5, 'a bow and arrow'),
+  createCharacter('Arwen Undomiel', 'arwen', 'Half-Elf', 'Rivendell', 9, 4, 'Hadhafang')
+];
+
+characters.find(character => character.nickname === 'aragorn').describe();
+
+const hobbits = characters.filter(character => character.race === 'Hobbit');
+
+const strong = characters.filter(character => character.attack > 5);
+
+//characters.forEach(character => console.log(character.describe()));
